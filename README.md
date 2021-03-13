@@ -1,4 +1,5 @@
 # Welcome to the NYC Potholes repo!
+![Pothole repair times by NYC Community Board, 3/12/2016-3/12/2021](https://github.com/tal-z/NYCPotHoles/blob/master/NYCPotholeMap.png)
 
 ## About
 This project is inspired a prompt provided at a session from NYC's Open Data Week 2021, called "Civic Hacking for Transit Equity," led by [co:census](https://cocensus.io). Though this prompt was not selected as a challenge during the session, the conversation during the session invigorated me to try the challenge myself, which sought solutions for understanding transit inequities at the roadbed level. 
