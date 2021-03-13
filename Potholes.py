@@ -13,7 +13,7 @@ end_date = '2021-03-12'  #input("End Date:  ")
 
 """Get pothole data from NYC Open Data into a GeoDataFrame."""
 # 1. Authenticate user account on NYC Open Data platform (Socrata).
-print("Logging into NYC Open Data")
+print("Logging into NYC Open Data.")
 client = Socrata("data.cityofnewyork.us",
                  'odQdEcIxnATZPym3KySwgWw27',
                  username=os.getenv('username'),
@@ -22,7 +22,7 @@ client = Socrata("data.cityofnewyork.us",
 # 2. Request records from the desired resource:
 # https://data.cityofnewyork.us/Transportation/Street-Pothole-Work-Orders-Closed-Dataset-/x9wy-ing4
 print(f"Getting pothole data from {start_date} to {end_date}. "
-      f"There are more than 300,000 records to retrieve, please be patient!")
+      "Please be patient! There are lots of potholes in NYC, so this could take a few minutes.")
 results = client.get("x9wy-ing4",
                      content_type='geojson',
                      limit=304000,
@@ -70,7 +70,7 @@ community_districts_gdf.plot(column='response_time',
                              cmap='RdYlGn_r',
                              legend_kwds={'label': "Time in Days"},
                              figsize=(10, 8))
-plt.title("Pothole Repair in New York City\nAvg. Response Times by Community District")
+plt.title(f"Pothole Repair in New York City\nAvg. Response Times by Community District\nFrom {start_date} to {end_date}")
 
 
 """Some optional extras to decorate the map."""
