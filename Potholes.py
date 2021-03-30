@@ -15,7 +15,7 @@ end_date = '2021-03-12'  #input("End Date:  ")
 # 1. Authenticate user account on NYC Open Data platform (Socrata).
 print("Logging into NYC Open Data.")
 client = Socrata("data.cityofnewyork.us",
-                 'odQdEcIxnATZPym3KySwgWw27',
+                 'XXXXXXXXXXXXXXXXXXXXX',
                  username=os.getenv('username'),
                  password=os.getenv('password'))
 
